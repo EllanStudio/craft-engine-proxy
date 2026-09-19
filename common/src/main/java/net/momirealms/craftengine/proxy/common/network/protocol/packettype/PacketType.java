@@ -51,7 +51,8 @@ public final class PacketType {
             ClientVersion.V_1_21_5,
             ClientVersion.V_1_21_6,
             ClientVersion.V_1_21_9,
-            ClientVersion.V_26_1
+            ClientVersion.V_26_1,
+            ClientVersion.V_26_3
     );
 
     //TODO UPDATE Update packet type mappings (serverbound pt. 1)
@@ -65,7 +66,8 @@ public final class PacketType {
             ClientVersion.V_1_21_5,
             ClientVersion.V_1_21_6,
             ClientVersion.V_1_21_9,
-            ClientVersion.V_26_1
+            ClientVersion.V_26_1,
+            ClientVersion.V_26_3
     );
 
     // TODO UPDATE Update packet type mappings (config clientbound pt. 1)
@@ -75,7 +77,8 @@ public final class PacketType {
             ClientVersion.V_1_20_5,
             ClientVersion.V_1_21,
             ClientVersion.V_1_21_6,
-            ClientVersion.V_1_21_9
+            ClientVersion.V_1_21_9,
+            ClientVersion.V_26_3
     );
 
     // TODO UPDATE Update packet type mappings (config serverbound pt. 1)
@@ -487,7 +490,12 @@ public final class PacketType {
             /**
              * &#064;versions  1.21.9+
              */
-            CODE_OF_CONDUCT;
+            CODE_OF_CONDUCT,
+
+            /**
+             * Added with 26.3
+             */
+            POST_EFFECTS;
 
             private static int INDEX = 0;
             private static final Map<Byte, Map<Integer, PacketTypeCommon>> PACKET_TYPE_ID_MAP = new HashMap<>();
@@ -506,6 +514,7 @@ public final class PacketType {
                 loadPacketIds(ClientboundConfigPacketType_1_21.values());
                 loadPacketIds(ClientboundConfigPacketType_1_21_6.values());
                 loadPacketIds(ClientboundConfigPacketType_1_21_9.values());
+                loadPacketIds(ClientboundConfigPacketType_26_3.values());
                 // TODO UPDATE Update packet type mappings (config clientbound pt. 2)
             }
 
@@ -681,6 +690,11 @@ public final class PacketType {
             ATTACK(),
             SET_GAME_RULE(),
             SPECTATE_ENTITY(),
+
+            /**
+             * Added with 26.3
+             */
+            PUNCH(),
             ;
 
             private static int INDEX = 0;
@@ -725,6 +739,7 @@ public final class PacketType {
                 loadPacketIds(ServerboundPacketType_1_21_6.values());
                 loadPacketIds(ServerboundPacketType_1_21_9.values());
                 loadPacketIds(ServerboundPacketType_26_1.values());
+                loadPacketIds(ServerboundPacketType_26_3.values());
                 //TODO UPDATE Update packet type mappings (serverbound pt. 2)
             }
 
@@ -970,7 +985,14 @@ public final class PacketType {
              * &#064;versions  26.1+
              */
             GAME_RULE_VALUES,
-            LOW_DISK_SPACE_WARNING;
+            LOW_DISK_SPACE_WARNING,
+
+            /**
+             * Added with 26.3
+             */
+            POST_EFFECTS,
+            ADD_TRANSIENT_BLOCK,
+            SWING_ANIMATION;
 
             private static int INDEX = 0;
             private static final Map<Byte, Map<Integer, PacketTypeCommon>> PACKET_TYPE_ID_MAP = new HashMap<>();
@@ -1026,6 +1048,7 @@ public final class PacketType {
                 loadPacketIds(ClientboundPacketType_1_21_6.values());
                 loadPacketIds(ClientboundPacketType_1_21_9.values());
                 loadPacketIds(ClientboundPacketType_26_1.values());
+                loadPacketIds(ClientboundPacketType_26_3.values());
                 //TODO UPDATE Update packet type mappings (clientbound pt. 2)
             }
         }
