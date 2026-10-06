@@ -49,9 +49,9 @@ jobs:
 
       - name: Smoke-check supported protocol classes
         run: |
-          test -f velocity/target/craft-engine-proxy-velocity-plugin-26.9.jar
-          test -f bungeecord/target/craft-engine-proxy-bungeecord-plugin-26.9.jar
-          for jar in velocity/target/*.jar bungeecord/target/*.jar; do
+          test -f target/craft-engine-proxy-velocity-plugin-26.9.jar
+          test -f target/craft-engine-proxy-bungeecord-plugin-26.9.jar
+          for jar in target/*.jar; do
             jar tf "$jar" | grep -q 'ClientboundPacketType_1_19_4.class'
             jar tf "$jar" | grep -q 'ClientboundPacketType_26_3.class'
           done
@@ -61,5 +61,4 @@ jobs:
         with:
           name: craft-engine-proxy-jars
           path: |
-            velocity/target/*.jar
-            bungeecord/target/*.jar
+            target/*.jar
