@@ -20,7 +20,7 @@ CraftEngine tags like `<image:...>` only get translated on backend servers. If a
 - **Velocity** or **BungeeCord / Waterfall** proxy
 - **Java 21+**
 - CraftEngine installed on backend servers
-- Client versions **1.20 → 26.2**
+- Client versions **1.20 → 26.3**
 
 ## Installation
 

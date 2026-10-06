@@ -20,7 +20,7 @@
 - **Velocity** 或 **BungeeCord / Waterfall** 代理端
 - **Java 21+**
 - 后端服务器已安装 CraftEngine
-- 客户端版本 **1.20 → 26.2**
+- 客户端版本 **1.20 → 26.3**
 
 ## 安装
 

@@ -1,7 +1,7 @@
 import net.momirealms.netty
 
 plugins {
-    id("xyz.jpenilla.run-velocity") version "3.0.2"
+    id("craft-engine-proxy.run-velocity")
     id("net.kyori.blossom") version "2.2.0"
 }
 
@@ -28,11 +28,6 @@ sourceSets {
 }
 
 tasks {
-    runVelocity {
-        velocityVersion(rootProject.properties["velocity_version"] as String)
-        jvmArgs("-Dsun.stdout.encoding=UTF-8", "-Dsun.stderr.encoding=UTF-8")
-    }
-
     shadowJar {
         relocation.applyProxy(this)
         archiveFileName = "${rootProject.name}-velocity-plugin-${rootProject.properties["project_version"]}.jar"

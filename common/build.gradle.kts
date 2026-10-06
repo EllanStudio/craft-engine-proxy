@@ -2,6 +2,10 @@ import net.momirealms.adventure
 import net.momirealms.nbt
 import net.momirealms.netty
 
+plugins {
+    id("craft-engine-proxy.run-servers")
+}
+
 dependencies {
     nbt(project, JavaPlugin.IMPLEMENTATION_CONFIGURATION_NAME)
     netty(project, JavaPlugin.COMPILE_ONLY_CONFIGURATION_NAME)

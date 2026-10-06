@@ -33,3 +33,4 @@ build/
 /buildSrc/.kotlin/
 /velocity/run/
 /bungeecord/run/
+/run/
