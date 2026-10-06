@@ -1,0 +1,9 @@
+_version: 29
+proxies:
+  bungee-cord:
+    online-mode: true
+  proxy-protocol: false
+  velocity:
+    enabled: false
+    online-mode: true
+    secret: 'craft-engine-proxy-local-forwarding-secret'
